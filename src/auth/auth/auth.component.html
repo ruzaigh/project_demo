@@ -1,0 +1,22 @@
+<div class="">
+    <div class="">
+        <form #authFrom="ngForm">
+            <div class="">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" class="" ngModal name="email" required email>
+            </div>
+            <div class="">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="" ngModal name="password" required minlength="6">
+            </div>
+            <div>
+                <button class="" type="submit" [disabled]="!authFrom.valid">
+                    {{isLoginMode ? 'Login' : 'Sign up'}}
+                </button>
+                <button class="" type="button" (click)="onSwitchMode()">
+                    Switch to {{ isLoginMode ? 'Sign up' : 'Login'}}
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
