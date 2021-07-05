@@ -5,7 +5,7 @@
   <!-- <a routerLink="/login" routerLinkActive="active">login</a>
 <a routerLink="/sign-up" routerLinkActive="active">sign up</a> -->
 
-  <div class="navbar">
+  <div class="navbar"  *ngIf="isAuthenticated" >
     <ul class="navbar-nav">
       <li class="logo">
         <a href="#" class="nav-link">
@@ -24,7 +24,7 @@
         </a>
       </li>
       <!-- Soccer -->
-      <li class="nav-item">
+      <li class="nav-item" >
         <a routerLink="/sport" routerLinkActive="active" class="nav-link">
           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="futbol" 
           class="svg-inline--fa fa-futbol fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zm-48 0l-.003-.282-26.064 22.741-62.679-58.5 16.454-84.355 34.303 3.072c-24.889-34.216-60.004-60.089-100.709-73.141l13.651 31.939L256 139l-74.953-41.525 13.651-31.939c-40.631 13.028-75.78 38.87-100.709 73.141l34.565-3.073 16.192 84.355-62.678 58.5-26.064-22.741-.003.282c0 43.015 13.497 83.952 38.472 117.991l7.704-33.897 85.138 10.447 36.301 77.826-29.902 17.786c40.202 13.122 84.29 13.148 124.572 0l-29.902-17.786 36.301-77.826 85.138-10.447 7.704 33.897C442.503 339.952 456 299.015 456 256zm-248.102 69.571l-29.894-91.312L256 177.732l77.996 56.527-29.622 91.312h-96.476z"
@@ -33,7 +33,7 @@
         </a>
       </li>
       <!-- Games -->
-      <li class="nav-item">
+      <li class="nav-item" >
         <a routerLink="/games" routerLinkActive="active" class="nav-link">
           <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="alien-monster" role="img"
             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
@@ -49,7 +49,7 @@
         </a>
       </li>
       <!-- Cool Facts -->
-      <li class="nav-item">
+      <li class="nav-item" >
         <a routerLink="/cool-facts" routerLinkActive="active" class="nav-link">
           <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="space-station-moon-alt" role="img"
             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
@@ -76,7 +76,7 @@
         </a>
       </li>
       <!-- logOut -->
-      <li class="nav-item" id="themeButton">
+      <li class="nav-item" id="themeButton"(click)="onLogout()">
         <a href="#" class="nav-link">
           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sign-out-alt" 
           class="svg-inline--fa fa-sign-out-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z"
